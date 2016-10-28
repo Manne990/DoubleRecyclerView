@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleRecyclerView", "DoubleRecyclerView\DoubleRecyclerView.csproj", "{696C0B30-623F-4FE3-89CE-305672BE5D49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{696C0B30-623F-4FE3-89CE-305672BE5D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696C0B30-623F-4FE3-89CE-305672BE5D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696C0B30-623F-4FE3-89CE-305672BE5D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696C0B30-623F-4FE3-89CE-305672BE5D49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
