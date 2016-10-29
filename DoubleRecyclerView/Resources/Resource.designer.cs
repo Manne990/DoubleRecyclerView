@@ -166,11 +166,8 @@ namespace DoubleRecyclerView
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070001
-			public const int app_name = 2131165185;
-			
 			// aapt resource value: 0x7f070000
-			public const int hello = 2131165184;
+			public const int app_name = 2131165184;
 			
 			static String()
 			{

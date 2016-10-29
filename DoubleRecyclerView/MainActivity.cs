@@ -1,9 +1,8 @@
-﻿using Android.App;
-using Android.Widget;
+﻿using System.Collections.Generic;
+using Android.App;
 using Android.OS;
 using Android.Support.V7.Widget;
 using DoubleRecyclerView.Adapter;
-using System.Collections.Generic;
 using DoubleRecyclerView.Model;
 
 namespace DoubleRecyclerView
@@ -11,10 +10,6 @@ namespace DoubleRecyclerView
     [Activity(Label = "DoubleRecyclerView", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
-        private RecyclerView _recyclerView;
-        private RecyclerView.LayoutManager _layoutManager;
-        private MainAdapter _adapter;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,18 +18,14 @@ namespace DoubleRecyclerView
             SetContentView(Resource.Layout.Main);
 
             // Recycler View - Main Container
-            _recyclerView = FindViewById<RecyclerView>(Resource.Id.containerRecyclerView);
+            var recyclerView = FindViewById<RecyclerView>(Resource.Id.containerRecyclerView);
 
-            _adapter = new MainAdapter(CreateMockData());
-
-            _recyclerView.SetAdapter(_adapter);
-
-            _layoutManager = new LinearLayoutManager(Application.Context, LinearLayoutManager.Vertical, false);
-            _recyclerView.SetLayoutManager(_layoutManager);
+            recyclerView.SetAdapter(new MainAdapter(CreateMockData()));
+            recyclerView.SetLayoutManager(new LinearLayoutManager(Application.Context, LinearLayoutManager.Vertical, false));
         }
 
         private List<ItemSection> CreateMockData()
-        { 
+        {
             var sections = new List<ItemSection>();
 
             sections.Add(new ItemSection()

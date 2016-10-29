@@ -7,7 +7,6 @@ namespace DoubleRecyclerView.Helper
 {
     public static class ImageLoader
     {
-        // Public Methods
         public static void LoadImage(string url, int width, int height, ImageView imageView, ProgressBar progressBar)
         {
             progressBar.Visibility = ViewStates.Visible;

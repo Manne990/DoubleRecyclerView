@@ -26,9 +26,7 @@ namespace DoubleRecyclerView.ViewHolder
         {
             _titleTextView.Text = section.Title;
 
-            var adapter = new ItemCarouselAdapter(section.Items, viewSize, imageSize);
-
-            ItemsView.SetAdapter(adapter);
+            ItemsView.SetAdapter(new ItemCarouselAdapter(section.Items, viewSize, imageSize));
         }
 
         public RelativeLayout Container { get; }

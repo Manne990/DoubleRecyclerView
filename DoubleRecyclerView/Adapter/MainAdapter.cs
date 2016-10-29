@@ -21,12 +21,12 @@ namespace DoubleRecyclerView.Adapter
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            var density = Application.Context.Resources.DisplayMetrics.Density;
             var viewHolder = (ItemSectionViewHolder)holder;
-
-            var viewSize = (int)(250 * density);
             var topMargin = ((ViewGroup.MarginLayoutParams)viewHolder.ItemsView.LayoutParameters).TopMargin;
             var bottomMargin = ((ViewGroup.MarginLayoutParams)viewHolder.ItemsView.LayoutParameters).BottomMargin;
+
+            var density = Application.Context.Resources.DisplayMetrics.Density;
+            var viewSize = (int)(250 * density);
             var childViewSize = viewSize - topMargin - bottomMargin;
             var imageSize = density > ImageMaxDpi ? (int)((childViewSize / density) * ImageMaxDpi) : viewSize;
 
@@ -39,21 +39,6 @@ namespace DoubleRecyclerView.Adapter
             var section = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ItemSectionLayout, parent, false);
 
             return new ItemSectionViewHolder(section);
-        }
-
-        public bool ShouldRefresh()
-        {
-            return _sections.Count == 0;
-        }
-
-        public void UpdateSections()
-        {
-            if (_sections.Count == 0)
-            {
-                return;
-            }
-
-            NotifyItemInserted(ItemCount - 1);
         }
     }
 }
